@@ -1,0 +1,46 @@
+/*pada logo (navbar)*/
+#root { /*supaya posisi tampilan ditengah*/
+  max-width: 1280px;        /* Lebar maksimum konten di tengah halaman */
+  margin: 0 auto;           /* Posisi horizontal di tengah otomatis */
+  padding: 2rem;            /* Jarak dalam (padding) ke semua sisi */
+  text-align: center;       /* Teks di dalam root diratakan ke tengah */
+}
+
+.logo {
+  height: 6em;              /* Tinggi logo = 6x ukuran font saat ini */
+  padding: 1.5em;           /* Jarak dalam sekitar logo */
+  will-change: filter;      /* Optimasi performa: beri tahu browser akan berubah filter */
+  transition: filter 300ms; /* Animasi halus saat filter berubah dalam 0.3 detik */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Efek bayangan biru lembut saat hover */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Efek bayangan biru muda khusus logo React */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);     /* Mulai dari 0 derajat */
+  }
+  to {
+    transform: rotate(360deg);   /* Berputar penuh searah jarum jam */
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {  
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear; /* Putar logo terus menerus, 1 putaran tiap 20 detik */
+  }
+}
+
+.card {
+  padding: 2em;  /* Jarak dalam untuk elemen dengan class "card" */
+}
+
+/* pada galery */
+.read-the-docs {
+  color: #888;   /* Warna abu-abu untuk teks petunjuk/dokumentasi */
+}

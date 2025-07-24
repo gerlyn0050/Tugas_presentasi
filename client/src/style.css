@@ -1,0 +1,98 @@
+/* General Styling */
+:root {
+  --primary-color: #007bff;         /* Warna utama (biru Bootstrap) */
+  --secondary-color: #343a40;       /* Warna sekunder (abu gelap / navy) */
+  --accent-color: #fd7e14;          /* Warna aksen (oranye untuk highlight/bintang) bagian beranda(lihat layanan kamu) */
+  --text-color: #333;               /* Warna teks utama */
+  --light-text-color: #555;         /* Warna teks lebih terang (abu muda) */
+  --background-light: #f8f9fa;      /* Background terang (Bootstrap light) */
+  --background-dark: #e9ecef;       /* Background abu lebih gelap */
+  --white: #fff;                    /* Putih */
+  --shadow-light: rgba(0, 0, 0, 0.1);/* Shadow halus */
+  --border-color: #dee2e6;          /* Warna garis batas (border Bootstrap) */
+}
+
+/* Override Bootstrap's primary color secara global */
+.btn-primary,
+.bg-primary,
+.text-primary {
+  --bs-primary: var(--primary-color);                   /* Gunakan warna biru sebagai primary */
+  --bs-btn-bg: var(--primary-color);                    /* Background tombol */
+  --bs-btn-border-color: var(--primary-color);          /* Border tombol */
+  --bs-btn-hover-bg: var(--secondary-color);            /* Hover tombol jadi abu gelap */
+  --bs-btn-hover-border-color: var(--secondary-color);  /* Border tombol saat hover */
+  --bs-table-hover-bg: var(--background-dark);          /* Warna baris tabel saat hover */
+}
+
+/* Override warna sekunder */
+.bg-secondary,
+.text-secondary {
+  --bs-secondary: var(--secondary-color); /* Gunakan warna abu gelap Bootstrap */
+}
+
+/* Header Navbar - Logo Brand */
+.main-header .navbar-brand.logo {
+  font-size: 1.5em;              /* Ukuran font logo */
+  font-weight: 700;              /* Tebal logo */
+  color: var(--primary-color);   /* Warna teks logo = biru */
+}
+
+.main-header .navbar-brand.logo img {
+  height: 30px;   /* Tinggi gambar logo */
+  width: 30px;    /* Lebar gambar logo */
+}
+
+/* Reset body layout */
+body {
+  margin: 0;      /* Hilangkan margin default */
+  padding: 0;     /* Hilangkan padding default */
+}
+
+/* Footer full width */
+footer {
+  width: 100%;    /* Lebar penuh */
+  margin: 0;
+  padding: 0;
+}
+
+/* Pastikan body dan root div tidak dibatasi lebar */
+body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Kelas utilitas Bootstrap - teks tengah */
+.text-center {
+  text-align: center;  /* Teks rata tengah */
+}
+
+/* Elemen utama harus bisa penuh lebar layar */
+main, section {
+  width: 100%;    /* Jangan dibatasi Bootstrap container */
+}
+
+/* Hindari konten ketimpa oleh navbar fixed-top */
+main {
+  padding-top: 100px;  /* Jarak atas 100px agar tidak tertutup navbar */
+}
+
+/* Style khusus untuk gambar galeri */
+.gallery-item img {
+  border-radius: 50%;    /* Gambar bulat sempurna */
+  width: 250px;          /* Lebar gambar */
+  height: 250px;         /* Tinggi gambar (sama agar proporsional) */
+  object-fit: cover;     /* Gambar akan di-crop tapi tetap memenuhi area */
+}
+
+/* Navigasi link dalam navbar */
+.main-header .nav-link {
+  color: var(--light-text-color); /* Warna teks link (abu muda) */
+  font-weight: 600;               /* Teks tebal */
+  padding: 8px 0;                 /* Padding vertikal */
+  margin-left: 20px;             /* Jarak antar menu */
+  position: relative;            /* Posisi relatif jika butuh underline aktif */
+  white-space: nowrap;           /* Teks tidak dibungkus ke bawah */
+}
+
+
